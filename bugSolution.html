@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    //Correct approach: using insertAdjacentHTML to append content at the end.
+    const myDiv = document.getElementById("myDiv");
+    const newContent = "<p>This text is appended.</p>";
+    myDiv.insertAdjacentHTML('beforeend', newContent);
+  </script>
+</body>
+</html>
